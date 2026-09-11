@@ -1,324 +1,668 @@
-<!doctype html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pagina Inicial - Itaipu Parquetec</title>
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  </head>
-
-  <body class="site">
-    <header>
-      <nav class="menu">
-        <div class="logo">
-          <img src="assets/imagens/logo-itaipu-parquetec-brasil.webp" alt="" />
-        </div>
-
-        <ul class="navegacao">
-          <li>
-            <a href="#"
-              >O Itaipu Parquetec <i class="bi bi-caret-down-fill"></i
-            ></a>
-          </li>
-          <li>
-            <a href="#"
-              >Para sua emperesa <i class="bi bi-caret-down-fill"></i
-            ></a>
-          </li>
-          <li>
-            <a href="#"
-              >Para sua startup <i class="bi bi-caret-down-fill"></i
-            ></a>
-          </li>
-          <li>
-            <a href="#">Educação e Sustentabilidade </a>
-          </li>
-          <li>
-            <a href="#">Turismo e Eventos </a>
-          </li>
-          <li>
-            <a href="#">Trabalhe Conosco </a>
-          </li>
-
-          <li class="idiomas">
-            <a href="#"><img src="assets/imagens/pt-br.svg" alt="" /></a>
-            <a href="#"><img src="assets/imagens/en-us.svg" alt="" /></a>
-            <a href="#"><img src="assets/imagens/es.svg" alt="" /></a>
-          </li>
-
-          <i class="bi bi-search"></i>
-        </ul>
-      </nav>
-    </header>
-
-    
-
-    <section class="video-banner">
-      <video autoplay muted loop playisline>
-        <source src="assets/videos/video-institucional-itaipu-parquetec.mp4" />
-      </video>
-    </section>
-
-    
-
-    <section class="conheca-parque">
-      <div class="container">
-        <div class="slogan">
-          <img
-            src="assets/imagens/arte-slogan-portugues-itaipu-parquetec.webp"
-            alt=""
-          />
-        </div>
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
-        <div class="text">
-          <p>
-            Somos um ecossistema de inovação localizado em Foz do Iguaçu (PR).
-            Estruturado como parque tecnológico e Instituto de Ciência e
-            Tecnologia (ICT), promovemos a conexão entre empresas,
-            universidades, governos e sociedade civil para impulsionar soluções
-            sustentáveis que contribuem para o desenvolvimento territorial e
-            geram bem-estar social.
-          </p>
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
-          <p>
-            <a href="" class="btn-conheca-parque"
-              >CONHEÇA O ECOSSISTEMA <i class="bi bi-cursor-fill"></i
-            ></a>
-          </p>
-        </div>
-      </div>
-    </section>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    
+body {
+  font-family: "Ubuntu", sans-serif;
+  color: #1f2124;
+}
 
-    <section class="espaco-inovacao">
+.container {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
 
-        <div class="conteudo">
+a {
+  text-decoration: none;
+}
 
-            <div class="selo">
-                <img src="imagens/selo.png" alt="Selo Itaipu Parquetec">
-            </div>
+header {
+  width: 100%;
+  height: 128px;
 
-            <div class="texto-inovacao">
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-                <h1>
-                    O ambiente ideal para quem quer
-                    <strong>inovar</strong>
-                </h1>
+  position: sticky;
+  top: 0;
 
-                <a href="#" class="botao-principal">
-                    Conecte-se conosco
-                    <i class="bi bi-arrow-right"></i>
-                </a>
+  z-index: 10;
 
-            </div>
+  background-image: linear-gradient(180deg, #d7d7d7 0%, #ffffff00 100%);
+}
 
-        </div>
+header .menu {
+  width: 96%;
+  height: 83px;
 
-    </section>
+  padding: 20px 50px;
 
+  border-radius: 10px;
 
-    
+  display: flex;
+  align-items: center;
 
-    <section class="destaque">
+  background-color: #ffffff;
 
-        <div class="conteudo">
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
 
-            <h2 class="titulo-area">Em destaque</h2>
+header .logo img {
+  width: 180px;
+  display: block;
+}
 
-            <div class="imagem-destaque">
-                <img src="imagens/destaque.jpg"
-                    alt="Campanha Itaipu Parquetec">
-            </div>
+header .menu .navegacao {
+  list-style: none;
 
-        </div>
+  flex: 1;
 
-    </section>
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
+  margin: 0;
+}
 
-    
+header .menu .navegacao a {
+  color: #1f2124;
+  font-size: 14px;
 
-    <section class="secao-videos">
+  transition: 0.2s;
+}
 
-        <div class="conteudo">
+header .menu .navegacao a:hover {
+  color: #1478bd;
+}
 
-            <h2 class="titulo-area">Vídeos</h2>
+header .menu .navegacao i {
+  font-size: 10px;
+}
 
-            <div class="lista-videos">
+header .menu .navegacao .idiomas {
+  display: flex;
+  gap: 3px;
+}
 
-                <div class="card-video">
+header .menu .navegacao .idiomas img {
+  width: 24px;
+  height: 18px;
+  margin-right: 2px;
+}
 
-                    <a href="https://www.youtube.com/" target="_blank">
-                        <img src="imagens/video1.jpg" alt="Vídeo 1">
-                    </a>
+header .menu .navegacao > li:last-child i {
+  font-size: 18px;
+}
 
-                    <h3>Inovação e tecnologia</h3>
+.video-banner {
+  width: 100%;
 
-                    <a href="https://www.youtube.com/" target="_blank"
-                        class="link-video">
-                        Assistir vídeo
-                        <i class="bi bi-play-circle"></i>
-                    </a>
+  position: relative;
 
-                </div>
+  margin-top: -30px;
 
+  z-index: -1;
+}
 
-                <div class="card-video">
+.video-banner video {
+  width: 100%;
+  height: 660px;
 
-                    <a href="https://www.youtube.com/" target="_blank">
-                        <img src="imagens/video2.jpg" alt="Vídeo 2">
-                    </a>
+  object-fit: cover;
 
-                    <h3>Conheça o Itaipu Parquetec</h3>
+  display: block;
+}
 
-                    <a href="https://www.youtube.com/" target="_blank"
-                        class="link-video">
-                        Assistir vídeo
-                        <i class="bi bi-play-circle"></i>
-                    </a>
+.conheca-parque .container {
+  display: flex;
 
-                </div>
+  justify-content: center;
+  align-items: flex-start;
 
+  gap: 40px;
 
-                <div class="card-video">
+  padding: 70px 0;
+}
 
-                    <a href="https://www.youtube.com/" target="_blank">
-                        <img src="imagens/video3.jpg" alt="Vídeo 3">
-                    </a>
+.conheca-parque .slogan {
+  flex-basis: 50%;
+}
 
-                    <h3>Projetos e sustentabilidade</h3>
+.conheca-parque .slogan img {
+  max-width: 100%;
+}
 
-                    <a href="https://www.youtube.com/" target="_blank"
-                        class="link-video">
-                        Assistir vídeo
-                        <i class="bi bi-play-circle"></i>
-                    
+.conheca-parque .container .text {
+  flex-basis: 50%;
 
-                </div>
+  font-size: 18px;
+  font-weight: 300;
 
-            </div>
+  line-height: 30px;
 
-        </div>
+  padding-top: 27px;
+}
 
-    </section>
+.conheca-parque .container .text p {
+  margin-bottom: 30px;
+}
 
+.conheca-parque .btn-conheca-parque {
+  display: inline-block;
 
-    
+  color: #ffffff;
 
-    <footer class="footer-site">
+  background-color: #1478bd;
 
-        <div class="conteudo">
+  border-radius: 5px;
 
-            <div class="footer-colunas">
+  font-size: 13px;
+  font-weight: 500;
 
-                
+  padding: 15px 25px;
 
-                <div class="footer-logo">
-                    <img src="imagens/logo.png"
-                        alt="Itaipu Parquetec">
+  transition: 0.2s;
+}
 
-                    <p>
-                        Um ecossistema de inovação,
-                        tecnologia e sustentabilidade.
-                    </p>
-                </div>
+.conheca-parque .btn-conheca-parque:hover {
+  background-color: #006627;
 
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.255);
+}
 
-                
+/* AMBIENTE IDEAL */
 
-                <div class="footer-bloco">
+.ambiente-ideal {
+  width: 100%;
 
-                    <h3>Sobre nós</h3>
+  padding: 70px 5%;
 
-                    <a href="#">Sobre Nós</a>
-                    <a href="#">Ecossistema</a>
-                    <a href="#">Trabalhe aqui</a>
+  color: #000000;
+}
 
-                </div>
+.ambiente-conteudo {
+  max-width: 1100px;
 
+  margin: auto;
 
-                
+  display: flex;
 
-                <div class="footer-bloco">
+  align-items: center;
 
-                    <h3>Contatos</h3>
+  justify-content: center;
 
-                    <a href="#">Fale Conosco</a>
-                    <a href="#">Perguntas Frequentes</a>
-                    <a href="#">Portal de Compras</a>
+  gap: 60px;
+}
 
-                </div>
+.ambiente-conteudo img {
+  width: 170px;
+  height: 170px;
 
+  object-fit: contain;
+}
 
-                
+.ambiente-conteudo h3 {
+  font-size: 32px;
 
-                <div class="footer-bloco">
+  font-weight: 300;
 
-                    <h3>Governança</h3>
+  line-height: 1.3;
 
-                    <a href="#">Canal de Ética</a>
-                    <a href="#">Transparência</a>
-                    <a href="#">Relatórios</a>
+  margin-bottom: 30px;
+}
 
-                </div>
+.ambiente-conteudo h3 strong {
+  font-weight: 700;
+}
 
-            </div>
+.btn-ambiente-ideal {
+  display: inline-block;
 
+  padding: 14px 25px;
 
-            
+  background-color: #ffffff;
 
-            <div class="redes">
+  color: #1478bd;
 
-                <a href="#">
-                    <i class="bi bi-instagram"></i>
-                </a>
+  border-radius: 5px;
 
-                <a href="#">
-                    <i class="bi bi-linkedin"></i>
-                </a>
+  font-size: 14px;
 
-                <a href="#">
-                    <i class="bi bi-facebook"></i>
-                </a>
+  font-weight: 700;
 
-                <a href="#">
-                    <i class="bi bi-youtube"></i>
-                </a>
+  transition: 0.2s;
+}
 
-            </div>
+.btn-ambiente-ideal:hover {
+  background-color: #eeeeee;
 
+  transform: translateY(-3px);
+}
 
-            
+.titulo-section {
+  text-align: center;
 
-            <div class="footer-final">
+  margin-bottom: 50px;
 
-                <div class="links-legais">
+  font-size: 44px;
 
-                    <a href="#">LGPD</a>
-                    <a href="#">Política de Privacidade</a>
-                    <a href="#">Política de Cookies</a>
-                    <a href="#">Termos de Uso</a>
+  font-weight: 700;
 
-                </div>
+  color: #2d2d2d;
+}
 
-                <p>
-                     2026 Itaipu Parquetec - Todos os direitos reservados.
-                </p>
+/* EM DESTAQUE */
 
-            </div>
+.em-destaque {
+  padding: 80px 0;
+}
 
-        </div>
+.destaque-imagem {
+  width: 100%;
 
-    </footer>
+  overflow: hidden;
 
-</body>
+  border-radius: 10px;
+}
 
-</html>
+.destaque-imagem img {
+  width: 100%;
 
+  display: block;
+
+  transition: 0.4s;
+}
+
+.destaque-imagem:hover img {
+  transform: scale(1.03);
+}
+
+/* BLOG */
+
+.nosso-blog {
+  padding: 80px 0;
+
+  background-color: #f9f9f9;
+}
+
+.nosso-blog .publicacoes {
+  display: flex;
+
+  flex-direction: row;
+
+  gap: 30px;
+}
+
+.nosso-blog .publicacao {
+  flex-basis: 33.33%;
+
+  background-color: #ffffff;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 20px 10px rgba(0, 0, 0, 0.042);
+
+  transition: 0.3s;
+}
+
+.nosso-blog .publicacao img {
+  width: 100%;
+
+  display: block;
+
+  border-radius: 5px;
+}
+
+.nosso-blog h2 {
+  font-size: 17px;
+
+  font-weight: 500;
+
+  line-height: 20px;
+
+  color: #2d2d2d;
+
+  margin: 15px 0 10px;
+}
+
+.nosso-blog p {
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 20px;
+
+  color: #2d2d2d;
+
+  margin-bottom: 15px;
+}
+
+.nosso-blog .publicacao > a {
+  color: #1478bd;
+
+  font-weight: 500;
+
+  font-size: 14px;
+}
+
+.nosso-blog .publicacao:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* VÍDEOS */
+
+.videos {
+  padding: 80px 0;
+
+  background-color: #ffffff;
+}
+
+.lista-videos {
+  display: flex;
+
+  gap: 30px;
+}
+
+.video-card {
+  flex: 1;
+
+  background-color: #ffffff;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+  padding-bottom: 20px;
+
+  transition: 0.3s;
+}
+
+.video-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.video-card img {
+  width: 100%;
+
+  display: block;
+}
+
+.video-card h4 {
+  font-size: 18px;
+
+  line-height: 24px;
+
+  margin: 20px;
+
+  color: #2d2d2d;
+}
+
+.link-video {
+  margin: 0 20px;
+
+  color: #1478bd;
+
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+.link-video i {
+  margin-left: 5px;
+
+  font-size: 16px;
+}
+
+/* FOOTER */
+
+.rodape {
+  background: linear-gradient(135deg, #ff0505, #23d90f);
+
+  color: #ffffff;
+
+  padding-top: 60px;
+}
+
+.rodape > .container {
+  display: grid;
+
+  grid-template-columns:
+    1.5fr
+    1fr
+    1fr
+    1fr
+    1fr;
+
+  gap: 40px;
+
+  padding-bottom: 50px;
+}
+
+.logo-footer img {
+  width: 190px;
+
+  filter: brightness(0) invert(1);
+}
+
+.footer-coluna {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.footer-coluna h4 {
+  font-size: 18px;
+
+  margin-bottom: 10px;
+
+  color: #ffffff;
+}
+
+.footer-coluna a {
+  color: #dddddd;
+
+  font-size: 14px;
+
+  transition: 0.2s;
+}
+
+.footer-coluna a:hover {
+  color: #43a5e5;
+}
+
+.redes-sociais {
+  display: flex;
+
+  gap: 15px;
+}
+
+.redes-sociais a {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #ffffff;
+
+  border-radius: 50%;
+
+  transition: 0.2s;
+}
+
+.redes-sociais a:hover {
+  background-color: #1478bd;
+
+  border-color: #1478bd;
+
+  color: #ffffff;
+}
+
+.footer-bottom .container {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+.links-legais {
+  display: flex;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+}
+
+.links-legais a {
+  color: #cccccc;
+
+  font-size: 13px;
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  color: #aaaaaa;
+
+  font-size: 13px;
+
+  text-align: right;
+}
+
+/* ================= RESPONSIVIDADE ================= */
+
+@media (max-width: 1100px) {
+  header .menu {
+    padding: 15px 25px;
+  }
+
+  header .menu .navegacao {
+    gap: 15px;
+  }
+
+  header .menu .navegacao a {
+    font-size: 12px;
+  }
+
+  .rodape > .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 92%;
+  }
+
+  header {
+    height: auto;
+
+    position: relative;
+  }
+
+  header .menu {
+    height: auto;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    padding: 20px;
+  }
+
+  header .menu .navegacao {
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 15px;
+  }
+
+  .video-banner {
+    margin-top: 0;
+  }
+
+  .video-banner video {
+    height: 400px;
+  }
+
+  .conheca-parque .container {
+    flex-direction: column;
+
+    padding: 50px 0;
+  }
+
+  .conheca-parque .slogan,
+  .conheca-parque .container .text {
+    flex-basis: 100%;
+  }
+
+  .ambiente-conteudo {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .ambiente-conteudo h3 {
+    font-size: 25px;
+  }
+
+  .nosso-blog .publicacoes {
+    flex-direction: column;
+  }
+
+  .lista-videos {
+    flex-direction: column;
+  }
+
+  .titulo-section {
+    font-size: 34px;
+  }
+
+  .rodape > .container {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .footer-coluna {
+    align-items: center;
+  }
+
+  .footer-bottom .container {
+    flex-direction: column;
+  }
+
+  .footer-bottom p {
+    text-align: center;
+  }
+
+  .links-legais {
+    justify-content: center;
+
+    text-align: center;
+  }
+}
